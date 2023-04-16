@@ -1,0 +1,23 @@
+.container {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 300px;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #41644A;
+
+    border-radius: 15px;
+}
+
+.main_title {
+    color: #F2E3DB;
+    font-size: 40px;
+}
