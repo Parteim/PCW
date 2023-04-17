@@ -5,19 +5,34 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 300px;
-    height: 200px;
+    width: 90%;
+
+    padding: 3%;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     background: #41644A;
 
     border-radius: 15px;
 }
 
-.main_title {
-    color: #F2E3DB;
-    font-size: 40px;
+.img_container {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    overflow: hidden;
+}
+
+.post_img {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 105%;
 }
