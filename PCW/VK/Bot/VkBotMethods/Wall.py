@@ -2,14 +2,14 @@ from PCW.VK.Bot.VkBot import VkBot
 
 
 class Wall(VkBot):
-    def get_posts(self, group, count_of_posts=100):
+    def get_posts(self, group, count_of_posts=81):
         posts = []
         offset = 0
         count = 100
         if count_of_posts <= 100:
             response = super().get(
                 'wall.get', domain=group,
-                count=count,
+                count=count_of_posts,
                 offset=offset,
             )
             posts.extend(response.json()['response']['items'])
@@ -33,8 +33,5 @@ class Wall(VkBot):
                     offset += count_of_posts
 
         return posts
-
-
-print(Wall().get_posts('fujiwaraclan'))
 
 

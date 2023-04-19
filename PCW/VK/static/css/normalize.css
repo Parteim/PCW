@@ -1,0 +1,15 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, menu {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}

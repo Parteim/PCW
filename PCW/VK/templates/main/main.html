@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <script src="https://kit.fontawesome.com/800f121123.js" crossorigin="anonymous"></script>
+
+    {% block styles %}
+
+
+
+    {% endblock styles %}
+
+    <title>VK</title>
+</head>
+<body>
+
+    <header class="main_header shadow">
+
+        <div class="nav_bar_container">
+            <nav class="main_nav_bar">
+
+                <a class="nav_bar_item" href="#" class="link_of_main_nav_bar">
+                    <i class="fa-solid fa-folder"></i>
+                </a>
+                <a class="nav_bar_item" href="#" class="link_of_main_nav_bar">Posts</a>
+                <a class="nav_bar_item" href="#" class="link_of_main_nav_bar"></a>
+            </nav>
+
+            <div class="main_logo_container">
+                <a class="main_logo" href="#"><i class="fa-solid fa-robot"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+<main>
+
+    {% block main %}
+
+
+
+{% endblock main %}
+
+</main>
+
+
+{% block scripts %}
+
+{% endblock scripts %}
+
+
+</body>
+</html>
