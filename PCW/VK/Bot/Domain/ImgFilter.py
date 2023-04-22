@@ -10,3 +10,5 @@ def img_filter(img_list):
                         filtered_img_list.append(img['url'])
 
     return filtered_img_list
+
+

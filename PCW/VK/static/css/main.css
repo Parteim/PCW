@@ -38,6 +38,9 @@ body {
     background-color: #41644A;
 
     border-radius: 0 0 20px 20px;
+    
+
+    z-index: 10;
 
     
 }

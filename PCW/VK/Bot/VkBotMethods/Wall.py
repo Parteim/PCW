@@ -2,9 +2,15 @@ from PCW.VK.Bot.VkBot import VkBot
 
 
 class Wall(VkBot):
-    def get_posts(self, group, count_of_posts=81):
+    def __init__(self, bot):
+        super(Wall, self).__init__(bot)
+
+    def get_posts(
+            self, group,
+            count_of_posts=100,
+            offset=0,
+    ):
         posts = []
-        offset = 0
         count = 100
         if count_of_posts <= 100:
             response = super().get(

@@ -3,11 +3,17 @@ import requests
 from .BotInterface import BaseBot
 
 
-class VkBot(BaseBot):
-    def __init__(self, access_token='',
+class VkBotInstance:
+    def __init__(self, access_token,
                  version_api='5.131'):
         self.access_token = access_token
         self.version_api = version_api
+
+
+class VkBot(BaseBot):
+    def __init__(self, bot):
+        self.access_token = bot.access_token
+        self.version_api = bot.version_api
         self.url = 'https://api.vk.com/method/'
 
     def get(self, method, **kwargs):
