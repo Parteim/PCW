@@ -1,4 +1,4 @@
-from PCW.VK.Bot.VkBot import VkBot
+from ..VkBot import VkBot
 
 
 class Wall(VkBot):

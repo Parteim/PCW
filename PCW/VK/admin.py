@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import VkBotModel, VkCommunityBotModel, VkCommunity
+
+admin.site.register(VkBotModel)
+admin.site.register(VkCommunityBotModel)
+admin.site.register(VkCommunity)

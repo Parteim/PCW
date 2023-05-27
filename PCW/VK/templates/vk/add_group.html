@@ -1,0 +1,19 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/add_group.css' %}">
+
+{% endblock styles %}
+
+{% block main %}
+
+<form class="add_community_form" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn_sign_up">Add</button>
+</form>
+
+{% endblock main %}

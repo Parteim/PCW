@@ -1,0 +1,68 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/vk_bot_instance.css' %}">
+
+{% endblock styles %}
+
+{% block main %}
+
+<div class="container">
+
+    <div class="bot_container">
+        <h2 class="bot_name">{{ bot.name }}</h2>
+    </div>
+
+    <div class="parsing_groups_container">
+
+        <a href="{% url 'add-community' bot.pk %}" class="add_group_btn"><i class="fa-solid fa-plus"></i> add new group in list</a>
+
+        <ul class="parsing_groups_list">
+
+            {% for group in group_list %}
+
+            <li class="parsing_group_instance">
+
+                <div class="parsing_group_img_container">
+                    <img src="{{ group.image.url }}"
+                         alt="#" class="parsing_group_img">
+                </div>
+
+                <div class="parsing_group_information_container">
+
+                    <h2 class="parsing_group_name">{{ group.name }}</h2>
+
+                    <div class="parsing_group_information">
+
+                        <p class="parsing_group_id">owner id: <span> {{ group.owner_id }} </span></p>
+                        <p class="parsing_group_domain">group domain: <span>{{ group.domain }}</span></p>
+
+                    </div>
+
+                    <div class="settings_bar">
+                        <button class="settings_bar_btn" id="hide_btn">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                        <button class="settings_bar_btn" id="delete_btn">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </li>
+
+            {% endfor %}
+
+
+        </ul>
+
+    </div>
+
+</div>
+
+{% endblock main %}

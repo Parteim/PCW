@@ -1,0 +1,52 @@
+.create_bot_form {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_fields {
+    margin-right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.form_fields input {
+    position: relative;
+
+    width: 300px;
+    height: 30px;
+
+    margin-bottom: 30px;
+
+    outline: none;
+}
+
+.btn_create_bot {
+
+    padding: 5px 20px;
+
+    background-color: #FFD369;
+
+    border: none;
+    border-radius: 10px;
+
+    color: #222831;
+    font-size: 25px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all .2s;
+}
+
+.btn_create_bot:hover {
+    background-color: #EEEEEE;
+}

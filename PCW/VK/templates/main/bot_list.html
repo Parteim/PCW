@@ -1,0 +1,30 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/bot_list.css' %}">
+
+{% endblock styles %}
+
+{% block main %}
+
+<div class="container">
+
+    <a href="{% url 'create-vk-bot' %}" class="create_bot_btn"><i class="fa-solid fa-plus"></i> create bot</a>
+
+    <ul class="bot_list">
+        {% for bot in bot_list %}
+
+        <li class="bot_item">
+            <a class="bot_instance_link"  href="{% url 'vk-bot-instance' bot.id %}">{{ bot.name }}</a>
+            <a class="bot_settings" href="{% url 'bot-settings' %}"><i class="fa-solid fa-gear"></i></a>
+        </li>
+
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock main %}

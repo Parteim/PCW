@@ -1,0 +1,19 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/sign_up.css' %}">
+
+{% endblock styles %}
+
+{% block main %}
+
+<form class="sign_up_form" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn_sign_up">Sign in</button>
+</form>
+
+{% endblock main %}

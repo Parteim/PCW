@@ -10,42 +10,63 @@
     {% block styles %}
 
 
-
     {% endblock styles %}
 
     <title>VK</title>
 </head>
 <body>
 
-    <header class="main_header shadow">
+{% if messages %}
 
-        <div class="nav_bar_container">
-            <nav class="main_nav_bar">
 
-                <a class="nav_bar_item" href="#" class="link_of_main_nav_bar">
-                    <i class="fa-solid fa-folder"></i>
-                </a>
-                <a class="nav_bar_item" href="#" class="link_of_main_nav_bar">Posts</a>
-                <a class="nav_bar_item" href="#" class="link_of_main_nav_bar"></a>
-            </nav>
+<ul class="alert">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %} > <span>{{ message }}</span> </li>
+    {% endfor %}
+</ul>
 
-            <div class="main_logo_container">
-                <a class="main_logo" href="#"><i class="fa-solid fa-robot"></i></a>
-            </div>
+
+{% endif %}
+
+<header class="main_header shadow">
+
+    <div class="nav_bar_container">
+        <nav class="main_nav_bar">
+
+            <a class="nav_bar_item link_of_main_nav_bar" href="#">
+                <i class="fa-solid fa-folder"></i>
+            </a>
+            <a class="nav_bar_item link_of_main_nav_bar" href="#">Posts</a>
+            <a class="nav_bar_item link_of_main_nav_bar" href="#"></a>
+            {% if user.is_authenticated %}
+            <a class="nav_bar_item link_of_main_nav_bar" href="{% url 'bot-list' %}">Bot list</a>
+            {% endif %}
+        </nav>
+
+        {% if user.is_authenticated %}
+        <div class="main_logo_container">
+            <a class="main_logo" href="{% url 'logout' %}"><i class="fa-solid fa-right-to-bracket"></i></a>
         </div>
 
-    </header>
+        {% else %}
+        <div class="sign_in_container">
+            <a class="sign_in_link" href="{% url 'sign-in' %}"> sign in </a>
+            <span>/</span>
+            <a class="sign_up_link" href="{% url 'sign-up' %}">sign up</a>
+        </div>
+        {% endif %}
+    </div>
+
+</header>
 
 <main>
 
     {% block main %}
 
 
-
-{% endblock main %}
+    {% endblock main %}
 
 </main>
-
 
 {% block scripts %}
 

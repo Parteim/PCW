@@ -1,0 +1,90 @@
+.container {
+    position: absolute;
+
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 96%;
+    min-height: 81%;
+
+    padding: 1%;
+
+}
+
+.create_bot_btn {
+
+    padding: 5px 10px;
+
+    color: #222831;
+    font-size: 20px;
+
+    background-color: #FFD369;
+
+    border-radius: 10px;
+
+    transition: all .2s;
+}
+
+.create_bot_btn:hover {
+    background-color: #EEEEEE;
+}
+
+.bot_list {
+    margin-top: 20px;
+}
+
+.bot_item {
+    position: relative;
+
+    padding: 5px 10px;
+    margin: 5px 0;
+
+    width: 30%;
+
+    height: 50px;
+
+}
+
+.bot_settings {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    color: #222831;
+    font-size: 20px;
+
+    transition: all .2s;
+}
+
+
+.bot_settings:hover {
+    transform: rotate(90deg);
+}
+
+
+.bot_instance_link {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    color: #222831;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFD369;
+
+    border-radius: 10px;
+
+    transition: all .2s;
+
+}
+
+.bot_instance_link:hover {
+
+    background-color: #EEEEEE;
+}

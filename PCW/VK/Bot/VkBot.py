@@ -16,7 +16,7 @@ class VkBot(BaseBot):
         self.version_api = bot.version_api
         self.url = 'https://api.vk.com/method/'
 
-    def get(self, method, **kwargs):
+    def get(self, method: object, **kwargs: object) -> object:
         params = {
             'v': self.version_api,
             'access_token': self.access_token,
